@@ -49,3 +49,31 @@ strArr[9] = 'f';
 console.log(strArr);
 
 console.log(strArr[6]);
+
+// 배열 요소의 삭제
+// 1. splice(): 삭제 시작할 인덱스와 삭제할 데이터 갯수를 지정
+// array.splice(start index, length of index)
+const numberArr = [0, 1, 2, 3, 4, 5, 6];
+// console.log(numberArr);
+// numberArr.splice(1, 2);
+// console.log(numberArr);
+
+// 2. indexOf(): 요소 인덱스를 직접 선택하여 삭제
+// 삭제 선택할 요소를 알고 있을 경우
+const removeIndex = numberArr.indexOf(3);
+// console.log(removeIndex);
+numberArr.splice(removeIndex, 2);
+// console.log(numberArr);
+
+// split(): 특정 문자 기준으로 분리
+const url = 'https://www.abc.com?qnt=3';
+console.log(url[3]); // 문자열은 배열 접근 방식으로 접근 가능
+const urlArr = url.split('=');
+// console.log(urlArr);
+
+// 전개 연산자(spread: ...)
+// 배열에 할당된 요소를 개수와 상관없이 모든 전달할 수 있도록 하는 방식
+
+const spreadArr = [...numberArr, 7, 8, 9];
+console.log(numberArr);
+console.log(spreadArr);
